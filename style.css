@@ -7,10 +7,7 @@ body {
     scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-}
-
+a { text-decoration: none; }
 
 .container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
 
@@ -41,6 +38,27 @@ h1, h2, h3 { color: #fff; margin-bottom: 1rem; }
     letter-spacing: 2px;
 }
 
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background: #c084fc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -49,7 +67,6 @@ h1, h2, h3 { color: #fff; margin-bottom: 1rem; }
 
 .nav-links a {
     color: #e0e7ff;
-    text-decoration: none;
     font-weight: 700;
     font-size: 1.1rem;
     transition: all 0.3s ease;
@@ -60,13 +77,13 @@ h1, h2, h3 { color: #fff; margin-bottom: 1rem; }
     transform: translateY(-2px);
 }
 
-/* Hero - Foto kiri, teks kanan */
+/* Hero */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #4c1d95, #7c3aed);
-    padding: 0 20px;
+    padding: 120px 20px 60px;
 }
 
 .hero-flex {
@@ -77,10 +94,7 @@ h1, h2, h3 { color: #fff; margin-bottom: 1rem; }
     width: 100%;
 }
 
-.hero-image {
-    flex: 1;
-    max-width: 45%;
-}
+.hero-image { flex: 1; max-width: 45%; }
 
 .hero-image img {
     width: 100%;
@@ -90,45 +104,11 @@ h1, h2, h3 { color: #fff; margin-bottom: 1rem; }
     object-fit: cover;
 }
 
-.hero-content {
-    flex: 1;
-    max-width: 55%;
-    text-align: left;
-}
+.hero-content { flex: 1; max-width: 55%; text-align: left; }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-}
+.hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; }
 
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2.5rem;
-    color: #e0e7ff;
-    opacity: 0.95;
-}
-
-/* Responsive Hero */
-@media (max-width: 992px) {
-    .hero-flex {
-        flex-direction: column;
-        text-align: center;
-        gap: 3rem;
-    }
-
-    .hero-image, .hero-content {
-        max-width: 100%;
-    }
-
-    .hero h1 { font-size: 3rem; }
-    .hero-subtitle { font-size: 1.3rem; }
-}
-
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.6rem; }
-    .hero-subtitle { font-size: 1.2rem; }
-}
+.hero-subtitle { font-size: 1.5rem; margin-bottom: 2.5rem; color: #e0e7ff; opacity: 0.95; }
 
 /* CTA Button */
 .cta-button {
@@ -148,7 +128,6 @@ h1, h2, h3 { color: #fff; margin-bottom: 1rem; }
 
 .secondary:hover { background: #c084fc; color: #1e1b4b; }
 
-/* Sisanya (layanan, pricing, add-on, portfolio, cta, footer) tetap seperti kode sebelumnya */
 section { padding: 120px 0; }
 h2 { font-size: 2.8rem; text-align: center; margin-bottom: 2.5rem; }
 .subtitle { font-size: 1.25rem; text-align: center; color: #c4b5fd; margin-bottom: 3.5rem; }
@@ -167,7 +146,7 @@ h2 { font-size: 2.8rem; text-align: center; margin-bottom: 2.5rem; }
 
 .layanan-card:hover { transform: translateY(-10px); border-color: #c084fc; box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
 
-/* Pricing - Horizontal Scroll */
+/* Pricing */
 .pricing-wrapper { position: relative; }
 
 .pricing-grid {
@@ -199,19 +178,15 @@ h2 { font-size: 2.8rem; text-align: center; margin-bottom: 2.5rem; }
 
 .pricing-card:hover { transform: translateY(-12px); box-shadow: 0 20px 45px rgba(0,0,0,0.4); border-color: #c084fc; }
 
-.pricing-card .features { flex-grow: 1; margin: 1.5rem 0; }
-.pricing-card .cta-button { margin-top: auto; align-self: center; }
-
 .price { font-size: 2.6rem; font-weight: 700; color: #c084fc; margin: 1.2rem 0 1.8rem; text-align: center; }
 
+.features { flex-grow: 1; margin: 1.5rem 0; }
 .features li { margin: 1rem 0; padding-left: 2rem; position: relative; }
-
 .features li::before { content: "✔"; position: absolute; left: 0; color: #c084fc; font-weight: bold; }
 
-/* Lihat Selengkapnya */
 .see-more { text-align: center; margin-top: 3rem; }
 
-/* Add-on - Max 3 kolom */
+/* Add-on */
 .addon-section { text-align: center; margin-top: 7rem; }
 
 .addon-grid {
@@ -242,7 +217,7 @@ h2 { font-size: 2.8rem; text-align: center; margin-bottom: 2.5rem; }
 
 .addon-price { font-size: 1.7rem; font-weight: 700; color: #c084fc; margin: 1rem 0; }
 
-/* Info & Ketentuan */
+/* Info */
 .info-section {
     max-width: 900px;
     margin: 0 auto 4rem;
@@ -256,11 +231,12 @@ h2 { font-size: 2.8rem; text-align: center; margin-bottom: 2.5rem; }
 
 .ketentuan-list li { margin: 1rem 0; font-size: 1.1rem; }
 
-/* Portfolio & CTA */
+/* Portfolio */
 .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin: 3.5rem 0; }
 
 .portfolio-item { background: rgba(49,46,129,0.65); border-radius: 20px; padding: 4rem; text-align: center; font-size: 1.4rem; }
 
+/* CTA */
 .cta-section { background: linear-gradient(to bottom, #312e81, #1e1b4b); text-align: center; }
 
 .why-list { list-style: none; max-width: 600px; margin: 2.5rem auto; font-size: 1.3rem; }
@@ -272,12 +248,60 @@ footer { background: #1e1b4b; padding: 5rem 0 3rem; text-align: center; border-t
 
 .social a { color: #c084fc; margin: 0 2rem; font-weight: 500; }
 
-/* Animasi & Responsive */
+/* Animasi */
 section { opacity: 0; transform: translateY(50px); transition: all 1s ease; }
 section.visible { opacity: 1; transform: translateY(0); }
 
-@media (max-width: 768px) {
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .navbar .container { padding: 1.2rem 20px; }
+
+    .hamburger { display: flex; }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(30, 27, 75, 0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        padding: 2rem;
+    }
+
+    .nav-links.active { right: 0; }
+
+    .nav-links a { font-size: 1.4rem; }
+
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+    /* Hero: foto hilang di HP */
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .hero-image { display: none; }
+
+    .hero-content { max-width: 100%; }
+
     .hero h1 { font-size: 2.8rem; }
-    .pricing-card { flex: 0 0 320px; min-height: 540px; padding: 2rem 1.8rem; }
-    .addon-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .hero-subtitle { font-size: 1.3rem; }
+
+    .pricing-card { flex: 0 0 90%; min-height: auto; }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.4rem; }
+    .pricing-card { padding: 2rem 1.5rem; }
 }
